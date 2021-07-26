@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import HelloWorld from "@/components/HelloWorld.vue";
 
 @Options({
   components: {
@@ -24,7 +24,7 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 })
 export default class Home extends Vue {
   notionLink =
-    "https://juniper-laundry-d0c.notion.site/The-notion-e3a037db2d20451085f48cd18027b461";
+    "https://joeee.notion.site/The-notion-e3a037db2d20451085f48cd18027b461";
 }
 </script>
 
