@@ -1,13 +1,12 @@
 <template>
   <div class="home">
     <h1 class="rainbow rainbow-text-animated">
-      I guess that's just the
       <a
         class="notion-link"
         v-bind:href="notionLink"
         target="_blank"
         title="The notion"
-        >notion</a
+        >I guess that's just the notion</a
       >
     </h1>
   </div>
