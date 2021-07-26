@@ -5,22 +5,33 @@
   </div> -->
   <div class="top-row">
     <div>
-      <img class="left-drizzy tl" src="/img/sad-drake.gif" alt="sad drake" />
+      <img class="left-drizzy tl" :src="sadDrake" alt="sad drake" />
     </div>
     <div>
-      <img class="tr" src="/img/sad-drake.gif" alt="sad drake" />
+      <img class="tr" :src="sadDrake" alt="sad drake" />
     </div>
   </div>
   <router-view />
   <div class="bottom-row">
     <div>
-      <img class="left-drizzy bl" src="/img/sad-drake.gif" alt="sad drake" />
+      <img class="left-drizzy bl" :src="sadDrake" alt="sad drake" />
     </div>
     <div>
-      <img class="br" src="/img/sad-drake.gif" alt="sad drake" />
+      <img class="br" :src="sadDrake" alt="sad drake" />
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import sadDrake from "./assets/sad-drake.gif";
+import { Options, Vue } from "vue-class-component";
+
+@Options({})
+export default class App extends Vue {
+  sadDrake = sadDrake;
+}
+
+</script>
 
 <style>
 * {
