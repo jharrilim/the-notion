@@ -29,6 +29,20 @@ import { Options, Vue } from "vue-class-component";
 const bingSelector =
   ".dgControl > ul:nth-child(1) > li:nth-child(1) > div > div > a > div > img";
 
+function changeFavicon(src: string) {
+  const link = document.createElement("link");
+  const oldLink = document.getElementById("dynamic-favicon");
+
+  link.id = "dynamic-favicon";
+  link.rel = "shortcut icon";
+  link.type = "image/png";
+  link.href = src;
+  if (oldLink) {
+    document.head.removeChild(oldLink);
+  }
+  document.head.appendChild(link);
+}
+
 @Options({})
 export default class App extends Vue {
   imageUrl = sadDrake;
@@ -61,6 +75,11 @@ export default class App extends Vue {
         const href = image?.getAttribute("src");
         if (href) {
           this.imageUrl = href;
+          fetch(href, { method: "HEAD" }).then((r) => {
+            if (r.headers.get("content-type")?.endsWith("png")) {
+              changeFavicon(href);
+            }
+          });
         }
       });
   }
