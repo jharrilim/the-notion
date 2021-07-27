@@ -3,27 +3,29 @@
     <h1 class="rainbow rainbow-text-animated">
       <a
         class="notion-link"
-        v-bind:href="notionLink"
-        target="_blank"
+        :href="notionLink"
         title="The notion"
-        >I guess that's just the notion</a
+        >I guess that's just {{ theNotion }}</a
       >
     </h1>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue";
+import { Vue, Options } from "vue-class-component";
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
+@Options({})
 export default class Home extends Vue {
-  notionLink =
-    "https://joeee.notion.site/The-notion-e3a037db2d20451085f48cd18027b461";
+  get theNotion(): string {
+    return this.$route.query.q?.toString() || 'the notion';
+  }
+
+  get notionLink(): string {
+    if (this.$route.query.q)
+      return `https://lmgtfy.app/?q=${this.$route.query.q}`;
+
+    return "https://joeee.notion.site/The-notion-e3a037db2d20451085f48cd18027b461";
+  }
 }
 </script>
 
