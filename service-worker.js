@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/the-notion/precache-manifest.47bccbc71b68d806af08a85c601545bd.js"
+  "/the-notion/precache-manifest.7d4c28a0850f697f18f6fe264d08d8df.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "the-notion"});

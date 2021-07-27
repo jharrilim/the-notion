@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "218bf5ceb466ce19d7c2",
+    "revision": "150d3b92fb195abaab99",
     "url": "/the-notion/css/app.6e994641.css"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-notion/img/sad-drake.ebe52642.gif"
   },
   {
-    "revision": "c41398c29b1c732aaa258b9f254b0b1c",
+    "revision": "b5b30a5a82940c4eed46c911cd2b73f0",
     "url": "/the-notion/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-notion/js/about.5de36b8d.js"
   },
   {
-    "revision": "218bf5ceb466ce19d7c2",
-    "url": "/the-notion/js/app.ce4ff3de.js"
+    "revision": "150d3b92fb195abaab99",
+    "url": "/the-notion/js/app.3bbdcb23.js"
   },
   {
     "revision": "b39c031e667df4cc1e13",
