@@ -5,19 +5,19 @@
   </div> -->
   <div class="top-row">
     <div>
-      <img class="left-drizzy tl" :src="imageUrl" alt="sad drake" />
+      <img height="200" width="200" class="left-drizzy tl" :src="imageUrl" alt="sad drake" />
     </div>
     <div>
-      <img class="tr" :src="imageUrl" alt="sad drake" />
+      <img height="200" width="200" class="tr" :src="imageUrl" alt="sad drake" />
     </div>
   </div>
   <router-view />
   <div class="bottom-row">
     <div>
-      <img class="left-drizzy bl" :src="imageUrl" alt="sad drake" />
+      <img height="200" width="200" class="left-drizzy bl" :src="imageUrl" alt="sad drake" />
     </div>
     <div>
-      <img class="br" :src="imageUrl" alt="sad drake" />
+      <img height="200" width="200" class="br" :src="imageUrl" alt="sad drake" />
     </div>
   </div>
 </template>
@@ -54,8 +54,12 @@ export default class App extends Vue {
   queryImage() {
     const search = new URL(window.location.href).searchParams;
 
+    if (search.get("i")) {
+      return this.imageUrl = search.get("i")!;
+    }
+
     const query = search.get("q");
-    if (!query || search.get('s')) {
+    if (!query || search.get("s")) {
       return;
     }
 
