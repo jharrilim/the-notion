@@ -5,19 +5,19 @@
   </div> -->
   <div class="top-row">
     <div>
-      <img class="left-drizzy tl" :src="sadDrake" alt="sad drake" />
+      <img class="left-drizzy tl" :src="imageUrl" alt="sad drake" />
     </div>
     <div>
-      <img class="tr" :src="sadDrake" alt="sad drake" />
+      <img class="tr" :src="imageUrl" alt="sad drake" />
     </div>
   </div>
   <router-view />
   <div class="bottom-row">
     <div>
-      <img class="left-drizzy bl" :src="sadDrake" alt="sad drake" />
+      <img class="left-drizzy bl" :src="imageUrl" alt="sad drake" />
     </div>
     <div>
-      <img class="br" :src="sadDrake" alt="sad drake" />
+      <img class="br" :src="imageUrl" alt="sad drake" />
     </div>
   </div>
 </template>
@@ -26,9 +26,44 @@
 import sadDrake from "./assets/sad-drake.gif";
 import { Options, Vue } from "vue-class-component";
 
+const bingSelector =
+  ".dgControl > ul:nth-child(1) > li:nth-child(1) > div > div > a > div > img";
+
 @Options({})
 export default class App extends Vue {
-  sadDrake = sadDrake;
+  imageUrl = sadDrake;
+
+  mounted() {
+    this.queryImage();
+  }
+
+  queryImage() {
+    const query = new URL(window.location.href).searchParams.get("q");
+    if (!query) {
+      return;
+    }
+
+    const bingUrl = `https://www.bing.com/images/search?q=${query}&qft=+filterui:aspect-square`;
+
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(
+      bingUrl.toString()
+    )}`;
+
+    fetch(proxyUrl, {
+      mode: "cors",
+    })
+      .then((res) => res.json())
+      .then(({ contents }) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(contents, "text/html");
+
+        const image = doc.querySelector(bingSelector);
+        const href = image?.getAttribute("src");
+        if (href) {
+          this.imageUrl = href;
+        }
+      });
+  }
 }
 </script>
 
