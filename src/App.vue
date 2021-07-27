@@ -52,8 +52,10 @@ export default class App extends Vue {
   }
 
   queryImage() {
-    const query = new URL(window.location.href).searchParams.get("q");
-    if (!query) {
+    const search = new URL(window.location.href).searchParams;
+
+    const query = search.get("q");
+    if (!query || search.get('s')) {
       return;
     }
 

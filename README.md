@@ -10,6 +10,10 @@ https://josephharrisonlim.com/the-notion?q=wednesday+my+dudes
 
 > Warning: The images come from Bing lul
 
+If you want to customize the text but not the image just add s=1 to the query
+
+https://josephharrisonlim.com/the-notion?q=wednesday+my+dudes&s=1
+
 ## Project setup
 ```
 yarn install
