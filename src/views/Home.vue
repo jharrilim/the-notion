@@ -1,10 +1,7 @@
 <template>
   <div class="home">
     <h1 class="rainbow rainbow-text-animated">
-      <a
-        class="notion-link"
-        :href="notionLink"
-        title="The notion"
+      <a class="notion-link" :href="notionLink" :title="theNotion"
         >I guess that's just {{ theNotion }}</a
       >
     </h1>
@@ -17,7 +14,7 @@ import { Vue, Options } from "vue-class-component";
 @Options({})
 export default class Home extends Vue {
   get theNotion(): string {
-    return this.$route.query.q?.toString() || 'the notion';
+    return this.$route.query.q?.toString() || "the notion";
   }
 
   get notionLink(): string {
