@@ -16,7 +16,7 @@ https://josephharrisonlim.com/the-notion?q=wednesday+my+dudes&s=1
 
 Or if you want to pick the image url, encode it such as `encodeURIComponent('https://your.image/of-a-frog.png')` and use the `i` query parameter:
 
-http://localhost:8080/?q=wednesday+my+dudes&i=https%3A%2F%2Fi.redd.it%2F0a9hkw82lk621.jpg
+https://josephharrisonlim.com/the-notion?q=wednesday+my+dudes&i=https%3A%2F%2Fi.redd.it%2F0a9hkw82lk621.jpg
 
 ## Project setup
 ```
