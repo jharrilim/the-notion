@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7c428f23d7fffd51252",
-    "url": "/the-notion/css/app.fb46140e.css"
+    "revision": "89f77240a88f8a263c87",
+    "url": "/the-notion/css/app.a2bccefd.css"
   },
   {
     "revision": "ebe5264272b7fa5cd6a7161e3e095de4",
     "url": "/the-notion/img/sad-drake.ebe52642.gif"
   },
   {
-    "revision": "19feb87185f564d3667b21246819d3e1",
+    "revision": "e3d02f798a7b54daf3997f1cb487463f",
     "url": "/the-notion/index.html"
   },
   {
-    "revision": "993ddca8d979bfc8a7ac",
-    "url": "/the-notion/js/about.e55b2c7b.js"
+    "revision": "75bc8a519d508a33cc8e",
+    "url": "/the-notion/js/about.5de36b8d.js"
   },
   {
-    "revision": "d7c428f23d7fffd51252",
-    "url": "/the-notion/js/app.c3e1ae20.js"
+    "revision": "89f77240a88f8a263c87",
+    "url": "/the-notion/js/app.918b073f.js"
   },
   {
-    "revision": "50c4eb08096d55d4deb7",
-    "url": "/the-notion/js/chunk-vendors.a0314551.js"
+    "revision": "b85816c5311475c472ec",
+    "url": "/the-notion/js/chunk-vendors.99a4372d.js"
   },
   {
     "revision": "ac0a4fe1871e18094ba2e1d4a26915fc",
